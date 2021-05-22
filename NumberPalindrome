@@ -1,0 +1,15 @@
+public class NumberPalindrome {
+ public static boolean isPalindrome(int number){
+     int reverse = 0, lastDigit = 0;
+        number = Math.abs(number);
+        for (int i= number; i>=1; i=i/10){
+            lastDigit = i%10;
+            reverse = reverse*10;
+            reverse += lastDigit;
+        }
+        if(number == reverse)
+            return true;
+        else
+            return false;
+ }
+}
