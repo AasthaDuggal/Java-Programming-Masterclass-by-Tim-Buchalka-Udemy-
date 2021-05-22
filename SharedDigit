@@ -1,0 +1,17 @@
+public class SharedDigit {
+    public static boolean hasSharedDigit(int one, int two){
+        if((one>9 && one<100)&&(two>9 && two<100)){
+            int oneDigit=0, twoDigit=0;
+            for(int i=one;i>=1;i=i/10){
+                oneDigit = i%10;
+                for(int j=two;j>=1;j=j/10){
+                    twoDigit = j%10;
+                    if(oneDigit == twoDigit){
+                        return true;
+                    }
+                }
+            } return false;
+        }else
+            return false;
+    }
+}
