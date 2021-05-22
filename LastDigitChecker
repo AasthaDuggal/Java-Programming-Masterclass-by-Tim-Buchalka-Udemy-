@@ -1,0 +1,13 @@
+public class LastDigitChecker {
+    public static boolean hasSameLastDigit(int one, int two, int three){
+        if ((isValid(one)&&isValid(two)&&isValid(three))&&((one%10 == two%10)||(one%10 == three%10)||(two%10 == three%10)))
+            return true;
+        else return false;
+    }
+    
+    public static boolean isValid(int num){
+        if(num>9 && num<1001)
+            return true;
+        else return false;
+    }
+}
